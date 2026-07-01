@@ -11,3 +11,4 @@
 *.xdv
 *.run.xml
 *-blx.bib
+./tmp
