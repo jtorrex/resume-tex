@@ -1,6 +1,7 @@
 .PHONY: all clean
 
-all: resume_cv.pdf
+all:
+	make clean && make resume_cv.pdf
 
 resume_cv.pdf: resume_cv.tex awesome-cv.cls fontawesome.sty fonts/*
 	xelatex resume_cv.tex
