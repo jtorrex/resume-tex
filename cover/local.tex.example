@@ -1,0 +1,56 @@
+%-------------------------------------------------------------------------------
+%	JOB-SPECIFIC COVER LETTER DATA
+%	Copy this file to cover/local.tex and fill in your details.
+%	cover/local.tex is gitignored and will never be committed.
+%-------------------------------------------------------------------------------
+
+% Recipient
+\recipient
+  {Company Recruitment Team}
+  {Company Name\\Street Address\\City, Postal Code}
+
+% Date — default to compilation date
+\letterdate{\today}
+
+% Subject line
+\lettertitle{Job Application for Platform Engineer}
+
+% Salutation
+\letteropening{Dear Hiring Manager,}
+
+% Closing
+\letterclosing{Sincerely,}
+
+% Enclosures
+\letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER BODY
+%	Define \coverbody with the full letter content.
+%-------------------------------------------------------------------------------
+\newcommand{\coverbody}{%
+  \begin{cvletter}
+
+  \lettersection{About Me}
+
+  I am an HPC/AI Platform Engineer with over eight years of experience
+  designing, building, and operating large-scale compute infrastructure...
+
+  \lettersection{Relevant Experience}
+
+  Write your tailored experience here...
+
+  \lettersection{Why This Role}
+
+  Explain why you are interested in this specific role and company...
+
+  \lettersection{Why Me}
+
+  Highlight what makes you stand out...
+
+  I would welcome the opportunity to discuss how my background aligns with
+  your team's needs. Thank you for your time and consideration.
+
+  \end{cvletter}
+}

@@ -1,0 +1,79 @@
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+\colorlet{awesome}{awesome-red}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\name{Jose E.}{Torres}
+\position{Platform Engineer{\enskip\cdotp\enskip}HPC/Cloud/AI}
+\address{Valencia, Spain / Remote}
+
+\mobile{(+34) 664 375 558}
+\email{jtorrex@posteo.net}
+\homepage{torrex.xyz}
+\github{jtorrex}
+\linkedin{jtorrex}
+
+\quote{HPC~·~Kubernetes~·~Cloud~·~DevOps~·~AI}
+
+
+%-------------------------------------------------------------------------------
+%	JOB-SPECIFIC INFORMATION
+%	Create cover/local.tex (gitignored) with \recipient, \lettertitle,
+%	\letteropening, \letterclosing, \letterenclosure, and \coverbody.
+%	See cover/local.tex.example for a template.
+%-------------------------------------------------------------------------------
+\InputIfFileExists{cover/local}
+  {}
+  {%
+    \recipient
+      {Company Name}
+      {Street Address\\City, Postal Code}
+    \letterdate{\today}
+    \lettertitle{Job Application for Platform Engineer}
+    \letteropening{Dear Hiring Manager,}
+    \letterclosing{Sincerely,}
+    \letterenclosure[Attached]{Curriculum Vitae}
+    \newcommand{\coverbody}{%
+      \begin{cvletter}
+      \lettersection{Note}
+      Create \texttt{cover/local.tex} with your job-specific content.
+      See \texttt{cover/local.tex.example} for a template.
+      \end{cvletter}
+    }%
+  }
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makecvheader
+
+\makecvfooter
+  {\today}
+  {Jose E. Torres~~~·~~~Cover Letter}
+  {}
+
+\makelettertitle
+
+\coverbody
+
+\makeletterclosing
+
+\end{document}
