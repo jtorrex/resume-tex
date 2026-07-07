@@ -15,22 +15,37 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Compile LaTeX
+      - name: Compile Resume
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: resume_cv.tex
+          root_file: resume/main.tex
           compiler: xelatex
-          args: -interaction=nonstopmode -file-line-error
+          args: -jobname=resume_cv -interaction=nonstopmode -file-line-error
 
-      - name: Upload PDF artifact
+      - name: Compile Cover Letter
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cover/main.tex
+          compiler: xelatex
+          args: -jobname=cover -interaction=nonstopmode -file-line-error
+
+      - name: Upload Resume artifact
         uses: actions/upload-artifact@v4
         with:
           name: resume
           path: resume_cv.pdf
 
+      - name: Upload Cover Letter artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cover
+          path: cover.pdf
+
       - name: Create Release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
-          files: resume_cv.pdf
+          files: |
+            resume_cv.pdf
+            cover.pdf
           generate_release_notes: true
