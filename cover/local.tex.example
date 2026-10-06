@@ -13,7 +13,7 @@
 \letterdate{\today}
 
 % Subject line
-\lettertitle{Job Application for Platform Engineer}
+\lettertitle{Job Application for Infrastructure/Systems Engineer}
 
 % Salutation
 \letteropening{Dear Hiring Manager,}
@@ -34,7 +34,7 @@
 
   \lettersection{About Me}
 
-  I am an HPC/AI Platform Engineer with over eight years of experience
+  I am an HPC/AI Infrastructure/Systems Engineer with over nine years of experience
   designing, building, and operating large-scale compute infrastructure...
 
   \lettersection{Relevant Experience}
